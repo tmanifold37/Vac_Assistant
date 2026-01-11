@@ -670,7 +670,10 @@
         }
       }
 
-      chatEl.scrollTop = chatEl.scrollHeight;
+      function isNearBottom(el, threshold = 40) {
+  return el.scrollHeight - el.scrollTop - el.clientHeight < threshold;
+}
+
     }
 
     // =============================
